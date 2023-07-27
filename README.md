@@ -4,6 +4,17 @@
 
 Hamming code calculator for blocks of data
 
+## Build
+
+```
+make
+cc -c engine.c -o engine.o
+
+Building hamming
+cc hamming.c engine.o -o hamming
+```
+
+
 ## Usage
 ```
 cat data.bin | ./hamming [OPTIONS]
