@@ -1,8 +1,12 @@
 # Hamming ECC calculator
 
-SPDX-License-Identifier: GPL-2.0+
-hamming code calculator for blocks of data
-Usage: cat data.bin | ./hamming [OPTIONS]
+`SPDX-License-Identifier: GPL-2.0+`
+
+Hamming code calculator for blocks of data
+
+## Usage
+```
+cat data.bin | ./hamming [OPTIONS]
 Or: ./hamming <-256|-512> <-smartmedia> -f data.bin
 Or: ./hamming <-256|-512> <-smartmedia> -d /dev/mtdX -s (seek/start byte) -l (length in bytes)
 OPTIONS:     -256 256-byte   ECC sectors (default)
@@ -10,6 +14,7 @@ OPTIONS:     -256 256-byte   ECC sectors (default)
              -sm             Smartmedia byte order
              -b              Output is 3-byte raw data (no newline) instead
                               of printing hex.
+```
 
 - Data should be in multiples of 256 or 512 bytes raw binary.
 - The ECC output does not place it at a specific OOB location or offset.
